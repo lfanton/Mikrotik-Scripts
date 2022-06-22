@@ -14,7 +14,8 @@ Below the explenation:
 <b>x.x.x.x</b> is the remote wireguard IP address, for example 172.17.0.2.
 
 
-
+<pre>
+  <code>
 /tool/netwatch
 add down-script=":global wgXnew [:resolve xxxxxxxx.sn.mynetname.net]\
     \n#:global wgXold [/interface wireguard peers get [find comment=\"wgX\"] endpoint-address ]\
@@ -24,3 +25,5 @@ add down-script=":global wgXnew [:resolve xxxxxxxx.sn.mynetname.net]\
     \n/interface wireguard peers set endpoint-address=\"\$wgXnew\" [find interface=\"wgX\"]\
     \n/log info \"Wireguard wgX ip updated\";\
     \n}" host=x.x.x.x interval=2m
+  </code>
+</pre>
