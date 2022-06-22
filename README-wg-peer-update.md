@@ -1,4 +1,5 @@
-# mikrotik-scripts
+# wg-peer-update
+
 This script allows to automatically update the public IP router address in a site-to-site Wireguard VPN when both routers have a dynamic public IP address and one of the two changes. 
 It can be used by creating a netwatch on both routers and checking the opposite remote hostname.
 Cancel changes
