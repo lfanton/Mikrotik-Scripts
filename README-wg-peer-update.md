@@ -6,9 +6,14 @@ Cancel changes
 Below the explenation:
 
 xxxxxxxx.sn.mynetname.net is the hostname of the remote router (You can enable it on /ip/cloud/ddns...)
+
 wgX is the name of the wireguard tunnel interface, generally it's called wg0, in this example it's also the interface comment.
+
 wgXold and wgXnew it's the respective variable with the old and new ip address.
+
 x.x.x.x is the remote wireguard IP address, for example 172.17.0.2.
+
+
 
 /tool/netwatch
 add down-script=":global wgXnew [:resolve xxxxxxxx.sn.mynetname.net]\
