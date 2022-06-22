@@ -1,6 +1,6 @@
 # wg-peer-update
 
-This script allows to automatically update the public IP router address in a site-to-site Wireguard VPN when both routers have a dynamic public IP address and one of the two changes.<br/>
+This script allows to automatically update the public IP router address in a site-to-site Wireguard VPN when both routers have a dynamic public IP address and one of the two changes (tipically after a reboot).<br/>
 It can be used by creating a netwatch on both routers and checking the opposite remote hostname.<br/>
 <br/>
 Below the explenation:<br/>
