@@ -7,7 +7,7 @@ Below the explenation:<br/>
 <br/>
 <b>xxxxxxxx.sn.mynetname.net</b> is the hostname of the remote router (You can enable it on /ip/cloud/ddns...);<br/>
 <b>wgX</b> is the name of the wireguard tunnel interface, generally it's called wg0, in this example it's also the interface comment;<br/>
-<b>wgXold</b> and wgXnew it's the respective variable with the old and new ip address;<br/>
+<b>wgXold</b> and <b>wgXnew</b> it's the respective variable with the old and new ip address;<br/>
 <b>x.x.x.x</b> is the remote wireguard IP address, for example 172.17.0.2;<br/>
 
 <pre>
