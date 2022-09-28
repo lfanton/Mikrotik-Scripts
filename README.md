@@ -13,13 +13,13 @@ Below the explenation:<br/>
 <pre>
   <code>
 /tool/netwatch
-add down-script=":global wgXnew [:resolve xxxxxxxx.sn.mynetname.net]\
-    \n#:global wgXold [/interface wireguard peers get [find comment=\"wgX\"] endpoint-address ]\
-    \n:global wgXold [/interface wireguard peers get value-name=endpoint-address [find interface=\"wgX\"]]\
-    \n\
-    \n:if (\$wgXold != \$wgXnew) do={\
-    \n/interface wireguard peers set endpoint-address=\"\$wgXnew\" [find interface=\"wgX\"]\
-    \n/log info \"Wireguard wgX ip updated\";\
-    \n}" host=x.x.x.x interval=2m
+add down-script=":global wgXnew [:resolve xxxxxxxx.sn.mynetname.net]
+    #:global wgXold [/interface wireguard peers get [find comment=\"wgX\"] endpoint-address ]
+    :global wgXold [/interface wireguard peers get value-name=endpoint-address [find interface=\"wgX\"]]
+    
+    :if (\$wgXold != \$wgXnew) do={
+    /interface wireguard peers set endpoint-address=\"\$wgXnew\" [find interface=\"wgX\"]
+    /log info \"Wireguard wgX ip updated\";
+    }" host=x.x.x.x interval=2m
   </code>
 </pre>
