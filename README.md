@@ -23,3 +23,10 @@ add down-script=":global wgXnew [:resolve xxxxxxxx.sn.mynetname.net]
     }" host=x.x.x.x interval=2m
   </code>
 </pre>
+
+
+
+# checkip-jumpcloud-radius
+
+This script allows to automatically update the public IP via API to RADIUS JumpCloud service.<br/>
+Also send an email with the new Public IP ... 
