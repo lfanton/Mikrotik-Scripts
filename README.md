@@ -26,7 +26,7 @@ add down-script=":global wgXnew [:resolve xxxxxxxx.sn.mynetname.net]
 
 
 
-# checkip-jumpcloud-radius
+# jumpcloud-radius-updateip
 
 This script allows to automatically update the public IP via API to RADIUS Login system from JumpCloud(TM) service on Mikrotik(TM) RouterOS(TM).<br/>
 Also, If you nead, it can send an e-mail with the new Public IP ... 
