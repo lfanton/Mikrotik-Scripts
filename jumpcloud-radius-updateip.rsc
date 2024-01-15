@@ -4,8 +4,8 @@
 :local toEmail email@notify.me
 :global lastip
 
-:global getmyip [/tool fetch url="https://ifconfig.io/ip" as-value output=user];
-:global myip ($getmyip->"data")
+:global getmyip [/ip/cloud/print as-value without-paging]
+:global myip ($getmyip->"public-address")
 
 :if ([:typeof $lastip] ~ "(nil|nothing)") do= {
 :log info nolastip
