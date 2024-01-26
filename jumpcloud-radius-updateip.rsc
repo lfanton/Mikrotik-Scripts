@@ -4,8 +4,15 @@
 :local toEmail email@notify.me
 :global lastip
 
+# using Mikrotik embedded service /ip/cloud/
+# https://help.mikrotik.com/docs/display/ROS/Cloud
 :global getmyip [/ip/cloud/print as-value without-paging]
 :global myip ($getmyip->"public-address")
+
+# external website like ifconfig.io or ifconfig.io
+#:global getmyip [/tool fetch url="https://ifconfig.io/ip" as-value output=user];
+# (simply remove /n character)
+#:global myip [ :pick ($getmyip->"data") 0 ( [ :len ($getmyip->"data") ] -1 ) ];
 
 :if ([:typeof $lastip] ~ "(nil|nothing)") do= {
 :log info nolastip
